@@ -127,7 +127,7 @@ body {
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  max-width: 50rem;
 }
 
 .hero .content h1 {
@@ -163,21 +163,26 @@ body {
   transform: scale(0.95); /* sedikit mengecil saat ditekan */
 }
 
+#map-pin {
+  display: inline-block;
+}
+
 /* About Section */
-.about,
-.member {
+.about {
   padding: 7rem 7% 1.4rem;
 }
 
-.about h2,
-.member h2 {
+.about h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span,
-.member h2 span {
+.about h2 span {
+  color: var(--primary);
+}
+
+.about h2 ra {
   color: var(--primary);
 }
 
@@ -190,11 +195,13 @@ body {
 }
 
 .about .row .about-img img {
-  width: 100%;
+  width: 90%;
+  border-radius: 20px;
+  height: auto;
 }
 
 .about .row .content {
-  flex: 1 1 35rem;
+  flex: 1 1 50rem;
   padding: 0 1rem;
 }
 
@@ -211,7 +218,7 @@ body {
 
 /* Member section */
 
-.member .anggota .halamannasrul {
+/* .member .anggota .halamannasrul {
   margin-top: 1rem;
   margin-left: 2rem;
   display: inline-block;
@@ -221,18 +228,57 @@ body {
   background-color: #465351;
   border-radius: 1rem;
   box-shadow: 1px 1px 3px rgba(255, 253, 253, 0.668);
+} */
+
+.member {
+  padding: 7rem 7% 1.4rem;
 }
 
-.member .anggota :hover {
+.member h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.member h2 span {
   color: var(--primary);
 }
 
-.member .anggota :active {
+.fotomember {
+  padding: 0rem 7% 1.4rem;
+}
+
+.fotomember .anggota .member-img img {
+  transition: transform 0.3s ease; /* Biar halus saat hover */
+}
+
+.fotomember .anggota .member-img .fotoaldri :hover {
+  transform: scale(1.1);
+}
+
+.fotomember .anggota .member-img :active {
   transform: scale(0.95);
 }
 
-#map-pin {
-  display: inline-block;
+.fotomember .anggota .member-img img {
+  width: 25%;
+  border-radius: 15px;
+  height: auto;
+}
+
+.formaldri {
+  display: grid;
+  grid-template-columns: 50px auto;
+  padding-top: 1rem;
+  row-gap: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
 }
 
 /* media queries */
@@ -287,7 +333,7 @@ body {
   }
 
   .about .about-img img {
-    height: 24rem;
+    height: auto;
     object-fit: cover;
     object-position: center;
   }
